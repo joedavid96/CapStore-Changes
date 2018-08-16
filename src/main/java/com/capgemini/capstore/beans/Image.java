@@ -1,19 +1,19 @@
 package com.capgemini.capstore.beans;
 
-import java.util.List;
-
 import javax.persistence.Embeddable;
 
 @Embeddable
 public class Image {
 
-	private List<String> imageUrl;
+	private String  imageUrl;
 
-	public List<String> getImageUrl() {
+	public String getImageUrl() {
 		return imageUrl;
 	}
 
-	public void setImageUrl(List<String> imageUrl) {
+	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
+
+
 }

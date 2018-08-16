@@ -1,5 +1,7 @@
 package com.capgemini.capstore.beans;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,16 +17,10 @@ public class Cart {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int cartId;
 	@OneToMany
-	private Product product;
+	private List<Product> products;
 	private int quantity;
 
 	//Constructors
-	public Cart(int cartId, Product product, int quantity) {
-		super();
-		this.cartId = cartId;
-		this.product = product;
-		this.quantity = quantity;
-	}
 
 	public Cart(int cartId) {
 		super();
@@ -42,16 +38,17 @@ public class Cart {
 	public void setCartId(int cartId) {
 		this.cartId = cartId;
 	}
-	public Product getProduct() {
-		return product;
-	}
-	public void setProduct(Product product) {
-		this.product = product;
-	}
 	public int getQuantity() {
 		return quantity;
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
+	public List<Product> getProducts() {
+		return products;
+	}
+	public void setProducts(List<Product> products) {
+		this.products = products;
+	}
+
 }
