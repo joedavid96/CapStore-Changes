@@ -10,7 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication(scanBasePackages={"com.capgemini.capstore"})
 @EntityScan(basePackages="com.capgemini.capstore.beans")
-@EnableJpaRepositories(basePackages="com.capgemini.capstore.daoservices")
+@EnableJpaRepositories(basePackages="com.capgemini.capstore.repo")
 public class CapStoreApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {

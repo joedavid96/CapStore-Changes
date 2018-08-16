@@ -10,8 +10,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Order")
-public class Order {
+@Table(name="OrderDetails")
+public class OrderDetails {
 
 	@Id
 	private int orderId;
@@ -30,15 +30,15 @@ public class Order {
 	private double orderAmount;
 
 	//Constructors
-	public Order(int orderId) {
+	public OrderDetails(int orderId) {
 		super();
 		this.orderId = orderId;
 	}
-	public Order() {
+	public OrderDetails() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Order(int orderId, Product product, Customer customer, Transaction transaction,
+	public OrderDetails(int orderId, Product product, Customer customer, Transaction transaction,
 			Date deliveryDate, Date orderDate, String deliveryStatus, Promo promo, double orderAmount) {
 		super();
 		this.orderId = orderId;

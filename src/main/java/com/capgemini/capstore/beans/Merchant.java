@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,10 +16,10 @@ public class Merchant {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int merchantId;
-	private String merhantName;
+	private String merchantName;
 	private String merchantEmail;
 	private String mobileNo;
-	@Embedded
+@OneToOne
 	private Address merchantAddress;
 	@Embedded
 	private Inventory merchantInventory;
@@ -33,11 +34,11 @@ public class Merchant {
 		super();
 		this.merchantId = merchantId;
 	}
-	public Merchant(int merchantId, String merhantName, String merchantEmail, String mobileNo, Address merchantAddress,
+	public Merchant(int merchantId, String merchantName, String merchantEmail, String mobileNo, Address merchantAddress,
 			Inventory merchantInventory, double merchantRevPercent, Date dateOfReg, Date dateOfDel, 	double merchantRevenue) {
 		super();
 		this.merchantId = merchantId;
-		this.merhantName = merhantName;
+		this.merchantName = merchantName;
 		this.merchantEmail = merchantEmail;
 		this.mobileNo = mobileNo;
 		this.merchantAddress = merchantAddress;
@@ -58,11 +59,11 @@ public class Merchant {
 		public void setMerchantId(int merchantId) {
 		this.merchantId = merchantId;
 	}
-	public String getMerhantName() {
-		return merhantName;
+	public String getMerchantName() {
+		return merchantName;
 	}
-	public void setMerhantName(String merhantName) {
-		this.merhantName = merhantName;
+	public void setMerchantName(String merhantName) {
+		this.merchantName = merhantName;
 	}
 	public String getMerchantEmail() {
 		return merchantEmail;

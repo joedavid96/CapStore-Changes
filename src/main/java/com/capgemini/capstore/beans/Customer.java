@@ -25,7 +25,7 @@ public class Customer {
 	private Date dateOfBirth;
 	private Date dateOfReg;
 	private Date dateOfDel;
-	@Embedded
+	@OneToOne
 	private Address address;
 	@OneToOne
 	private Cart cart;

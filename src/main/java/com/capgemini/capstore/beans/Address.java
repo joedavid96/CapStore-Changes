@@ -1,10 +1,15 @@
 package com.capgemini.capstore.beans;
 
 import javax.persistence.Embeddable;
-
-@Embeddable
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+@Entity
 public class Address {
-
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+int address_id;
 
 	private String addressLine1;
 	private String addressLine2;
