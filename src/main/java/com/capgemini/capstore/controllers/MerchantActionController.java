@@ -20,5 +20,11 @@ public class MerchantActionController {
 		mservices.addMerchant(merchant);
 	
 	}
+	
+	@RequestMapping(value="/getMerchant", method=RequestMethod.GET)
+	public Merchant getMerchant(int merchantId) {
+	return mservices.displaySingleMerchant(merchantId);
+	
+	}
 
 }
